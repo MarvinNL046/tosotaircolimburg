@@ -2,7 +2,7 @@ export const contactConfig = {
   companyName: "Tosot Airco Limburg",
   phone: "046 202 1430",
   phoneClean: "462021430",
-  email: "info@tosotaircolimburg.nl",
+  email: "info@staycoolairco.nl",
   address: {
     street: "",
     city: "Limburg",

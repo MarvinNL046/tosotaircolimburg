@@ -1,20 +1,20 @@
 export const images = {
   hero: {
-    main: "/images/tosot-clivia-wit.png",
+    main: "/images/tosot-clivia-wit.webp",
     alt: "Tosot Clivia airconditioner in modern interieur"
   },
   products: {
     clivia: {
-      white: "/images/tosot-clivia-wit.png",
-      black: "/images/tosot-clivia-zwart.png",
+      white: "/images/tosot-clivia-wit.webp",
+      black: "/images/tosot-clivia-zwart.webp",
       alt: "Tosot Clivia airconditioner"
     },
     cosmo: {
-      white: "/images/tosot-cosmo-wit.png",
+      white: "/images/tosot-cosmo-wit.webp",
       alt: "Tosot Cosmo airconditioner"
     },
     pular: {
-      white: "/images/tosot-pular-wit.png",
+      white: "/images/tosot-pular-wit.webp",
       alt: "Tosot Pular airconditioner"
     }
   }
@@ -31,7 +31,7 @@ export type ProductImage = {
 
 export const productImages: ProductImage[] = [
   {
-    src: "/images/tosot-clivia-wit.png",
+    src: "/images/tosot-clivia-wit.webp",
     alt: "Tosot Clivia Wit",
     title: "Tosot Clivia",
     description: "Premium design met geavanceerde technologie",
@@ -39,21 +39,21 @@ export const productImages: ProductImage[] = [
     highlight: "Best verkocht"
   },
   {
-    src: "/images/tosot-clivia-zwart.png",
+    src: "/images/tosot-clivia-zwart.webp",
     alt: "Tosot Clivia Zwart",
     title: "Tosot Clivia Black",
     description: "Stijlvolle zwarte uitvoering met superieure prestaties",
     price: "Vanaf €1.899,-"
   },
   {
-    src: "/images/tosot-cosmo-wit.png",
+    src: "/images/tosot-cosmo-wit.webp",
     alt: "Tosot Cosmo",
     title: "Tosot Cosmo",
     description: "Krachtige prestaties voor optimaal comfort",
     price: "Vanaf €1.699,-"
   },
   {
-    src: "/images/tosot-pular-wit.png",
+    src: "/images/tosot-pular-wit.webp",
     alt: "Tosot Pular",
     title: "Tosot Pular",
     description: "Efficiënte klimaatbeheersing voor elke ruimte",
