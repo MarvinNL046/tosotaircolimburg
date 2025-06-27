@@ -91,14 +91,14 @@ export function Timeline() {
                     <div
                       className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer border-2 ${
                         activeEvent === index
-                          ? 'border-primary'
+                          ? 'border-blue-600'
                           : 'border-transparent'
                       }`}
                       onClick={() => setActiveEvent(activeEvent === index ? null : index)}
                     >
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Icon className="h-4 w-4 text-primary" />
+                        <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                          <Icon className="h-4 w-4 text-blue-600" />
                         </div>
                         <span className="font-bold text-xl">{event.year}</span>
                       </div>
@@ -115,14 +115,14 @@ export function Timeline() {
                           <p className="text-sm text-gray-500">
                             Klik voor meer informatie over deze mijlpaal
                           </p>
-                          <ChevronRight className="h-4 w-4 text-primary mt-2" />
+                          <ChevronRight className="h-4 w-4 text-blue-600 mt-2" />
                         </motion.div>
                       )}
                     </div>
                   </motion.div>
 
                   {/* Center dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow" />
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow" />
                 </div>
               );
             })}

@@ -1,3 +1,3 @@
-# Daikin-Airco-Limburg
+# Tosot-Airco-Limburg
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/MarvinNL046/Daikin-Airco-Limburg)
+Website voor Tosot Airco Limburg - Officiële Tosot dealer en installateur in heel Limburg.

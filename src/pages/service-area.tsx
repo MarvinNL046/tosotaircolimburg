@@ -11,7 +11,7 @@ export default function ServiceAreaPage() {
         <div className="container mx-auto px-4 py-12">
           <Link 
             to="/" 
-            className="inline-flex items-center text-primary hover:text-primary-dark mb-8"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Terug naar home

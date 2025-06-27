@@ -89,7 +89,7 @@ export function ProductComparison() {
                     <td key={colIndex} className="px-6 py-4 text-sm text-gray-600">
                       {typeof value === "boolean" ? (
                         value ? (
-                          <Check className="h-5 w-5 text-primary" />
+                          <Check className="h-5 w-5 text-green-600" />
                         ) : (
                           <Minus className="h-5 w-5 text-gray-400" />
                         )
@@ -105,7 +105,7 @@ export function ProductComparison() {
                   Vanaf prijs (incl. installatie)
                 </td>
                 {comparisonData.prices.map((price, index) => (
-                  <td key={index} className="px-6 py-4 text-sm font-semibold text-primary">
+                  <td key={index} className="px-6 py-4 text-sm font-semibold text-blue-600">
                     {price}
                   </td>
                 ))}

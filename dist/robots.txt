@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daikinaircolimburg.nl/sitemap.xml
+# Sitemaps
+Sitemap: https://tosotaircolimburg.nl/sitemap.xml

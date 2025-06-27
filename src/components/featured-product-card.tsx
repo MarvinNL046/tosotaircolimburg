@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from "lucide-react";
 import { ProductImage } from "@/config/images";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 
 interface FeaturedProductCardProps {
   product: ProductImage;
@@ -19,10 +20,13 @@ export function FeaturedProductCard({ product }: FeaturedProductCardProps) {
     <div className="col-span-full lg:col-span-2 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
       <div className="grid lg:grid-cols-2 gap-6">
         <div className="relative aspect-[4/3] lg:aspect-auto">
-          <img
+          <OptimizedImage
             src={product.src}
             alt={product.alt}
             className="absolute inset-0 w-full h-full object-cover"
+            width={600}
+            height={450}
+            priority
           />
           {product.highlight && (
             <div className="absolute top-4 right-4 z-10 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -40,7 +44,7 @@ export function FeaturedProductCard({ product }: FeaturedProductCardProps) {
           <div className="space-y-3 mb-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
-                <Check className="h-5 w-5 text-primary flex-shrink-0" />
+                <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
                 <span className="text-gray-600">{feature}</span>
               </div>
             ))}
@@ -48,7 +52,7 @@ export function FeaturedProductCard({ product }: FeaturedProductCardProps) {
 
           <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors"
           >
             Vraag een offerte aan
             <ArrowRight className="ml-2 h-5 w-5" />

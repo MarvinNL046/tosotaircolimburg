@@ -3,24 +3,44 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Wat zijn de kosten van een airco installatie?",
-    answer: "De kosten van een airco installatie zijn afhankelijk van verschillende factoren zoals het type unit, de grootte van de ruimte en de complexiteit van de installatie. Onze prijzen beginnen vanaf €1.599,- voor een complete installatie inclusief montage. Neem contact met ons op voor een exacte prijsopgave op maat."
+    question: "Wat kost een Tosot airco installatie in Limburg?",
+    answer: "Een complete Tosot airco installatie in Limburg begint vanaf €1.599,- inclusief BTW, montage en inbedrijfstelling. De exacte prijs hangt af van het Tosot model (Clivia, Cosmo of Pular), het vermogen (kW) en de complexiteit van de installatie. Wij bieden gratis inmeting en offerte binnen 24 uur voor heel Limburg, van Maastricht tot Venlo."
   },
   {
-    question: "Hoe lang duurt een airco installatie?",
-    answer: "Een standaard airco installatie duurt gemiddeld 4-6 uur. Bij complexere installaties of bij een multi-split systeem kan dit oplopen tot een hele werkdag. We zorgen ervoor dat de installatie netjes en professioneel wordt uitgevoerd met minimale overlast."
+    question: "Hoe lang duurt een Tosot airco installatie?",
+    answer: "Een standaard Tosot single-split installatie duurt 4-6 uur. Voor een Tosot multi-split systeem rekenen we 6-8 uur. Onze Tosot-gecertificeerde monteurs werken netjes en efficiënt, inclusief het wegwerken van leidingen en het testen van uw nieuwe Tosot systeem. We plannen installaties ook op zaterdag zonder meerkosten."
   },
   {
-    question: "Is een airco energiezuinig?",
-    answer: "Moderne Daikin airconditioners zijn zeer energiezuinig met energielabel A+++. Ze verbruiken gemiddeld 0,5-1 kWh per uur bij koelen. Door gebruik te maken van de ingebouwde timer en slimme functies kunt u het energieverbruik verder optimaliseren."
+    question: "Hoeveel verbruikt een Tosot airco?",
+    answer: "Tosot airconditioners hebben energielabel A+++ en verbruiken slechts 0,5-1 kWh per uur bij koelen. Een Tosot Clivia 2.5kW verbruikt bijvoorbeeld €0,15-0,30 per uur. Met de Tosot WiFi-module en I-Feel technologie bespaart u tot 30% extra door slimme temperatuurregeling. Bij verwarmen levert een Tosot tot 5kW warmte per 1kW stroom (COP 5.0)."
   },
   {
-    question: "Hoe vaak moet een airco onderhouden worden?",
-    answer: "We adviseren om uw airco jaarlijks te laten onderhouden voor optimale prestaties en een langere levensduur. Bij intensief gebruik kan twee keer per jaar onderhoud raadzaam zijn. Tijdens het onderhoud reinigen we de filters, controleren we het systeem en vullen indien nodig het koudemiddel bij."
+    question: "Wat kost Tosot airco onderhoud in Limburg?",
+    answer: "Tosot onderhoudscontract in Limburg kost vanaf €11 per maand (€132/jaar). Dit omvat jaarlijkse controle, filterreiniging, koudemiddelcontrole en software-updates. Met onderhoudscontract heeft u voorrang bij storingen en behoud van 5 jaar Tosot garantie. Losse onderhoudsbeurt kost €89. Wij onderhouden Tosot in heel Limburg."
   },
   {
-    question: "Kan een airco ook verwarmen?",
-    answer: "Ja, alle Daikin airconditioners die wij installeren zijn warmtepompen die zowel kunnen koelen als verwarmen. In de verwarmingsstand zijn ze zeer efficiënt en kunnen ze tot wel 4-5 keer zoveel warmte produceren als de elektriciteit die ze verbruiken."
+    question: "Kan een Tosot airco ook verwarmen?",
+    answer: "Ja, alle Tosot modellen (Clivia, Cosmo, Pular) zijn lucht-lucht warmtepompen die efficiënt verwarmen tot -25°C buitentemperatuur. Een Tosot verwarmt 4-5x goedkoper dan gas of elektrische kachels. De Tosot Clivia heeft zelfs een speciale 10°C verwarmingsstand voor vorstbeveiliging in vakantiewoningen."
+  },
+  {
+    question: "Welke Tosot airco is het beste voor mijn woning?",
+    answer: "Voor slaapkamers tot 35m² adviseren wij de stille Tosot Clivia (19dB). Voor woonkamers tot 50m² is de krachtige Tosot Cosmo ideaal. Voor grote ruimtes tot 70m² biedt de Tosot Pular maximaal vermogen. Onze adviseurs berekenen gratis het exacte vermogen voor uw situatie in Limburg."
+  },
+  {
+    question: "Hoe stil is een Tosot airco?",
+    answer: "Tosot airconditioners behoren tot de stilste ter wereld. De Tosot Clivia produceert slechts 19dB (stiller dan gefluister). De Tosot Cosmo: 22dB. De Tosot Pular: 24dB. Ter vergelijking: een normale conversatie is 60dB. Perfect voor slaapkamers en babykamers."
+  },
+  {
+    question: "Wat is het verschil tussen Tosot en andere merken?",
+    answer: "Tosot by Gree is 's werelds grootste aircoproducent met 40% marktaandeel. Tosot biedt: langste garantie (5 jaar), hoogste energielabel (A+++), stilste werking (vanaf 19dB), beste prijs-kwaliteit en snelste levertijd. Als officiële Tosot dealer Limburg hebben wij alle modellen op voorraad."
+  },
+  {
+    question: "Mag ik zelf een Tosot airco installeren?",
+    answer: "Nee, volgens F-gassen wetgeving moet een airco geïnstalleerd worden door een F-gassen gecertificeerd bedrijf. Onze monteurs hebben alle certificaten voor Tosot installatie. Bij zelf installeren vervalt de garantie en riskeert u een boete tot €45.000. Wij installeren vakkundig in heel Limburg."
+  },
+  {
+    question: "Hoeveel jaar garantie zit er op een Tosot airco?",
+    answer: "Tosot geeft standaard 5 jaar fabrieksgarantie op alle onderdelen bij installatie door een erkend bedrijf. Met ons Tosot onderhoudscontract verlengen wij de garantie tot 7 jaar. Dit is de langste garantie in de markt. Garantie geldt voor heel Limburg."
   }
 ];
 
@@ -31,9 +51,12 @@ export function FAQ() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Veelgestelde vragen
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Veelgestelde vragen over Tosot Airco Limburg
           </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Alles wat u moet weten over Tosot airconditioning installatie, kosten, onderhoud en garantie in Limburg
+          </p>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
@@ -46,9 +69,9 @@ export function FAQ() {
                 >
                   <span className="font-medium">{faq.question}</span>
                   {openIndex === index ? (
-                    <Minus className="h-5 w-5 text-primary flex-shrink-0" />
+                    <Minus className="h-5 w-5 text-blue-600 flex-shrink-0" />
                   ) : (
-                    <Plus className="h-5 w-5 text-primary flex-shrink-0" />
+                    <Plus className="h-5 w-5 text-blue-600 flex-shrink-0" />
                   )}
                 </button>
                 {openIndex === index && (

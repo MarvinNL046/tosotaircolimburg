@@ -25,7 +25,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="py-24 bg-gradient-to-br from-primary-light/5 to-primary/5">
+    <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100/50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
           Waarom Kiezen voor Onze Tosot Airconditioners?
@@ -36,8 +36,8 @@ export function Benefits() {
               key={index}
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <benefit.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                <benefit.icon className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
               <p className="text-gray-600">{benefit.description}</p>
@@ -47,9 +47,9 @@ export function Benefits() {
 
         {/* Guarantee Badge */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 p-4 bg-primary/5 rounded-lg">
+          <div className="inline-flex items-center gap-2 p-4 bg-blue-50 rounded-lg">
             <svg 
-              className="h-5 w-5 text-primary" 
+              className="h-5 w-5 text-blue-600" 
               viewBox="0 0 24 24" 
               fill="none" 
               stroke="currentColor" 
@@ -64,7 +64,7 @@ export function Benefits() {
           <div className="mt-8">
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-[#009688] text-white rounded-lg hover:bg-[#00796B] transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
             >
               Plan een gratis adviesgesprek
               <svg 

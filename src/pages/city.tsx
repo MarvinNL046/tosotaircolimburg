@@ -67,7 +67,7 @@ export default function CityPage() {
               </p>
               <Link
                 to="/#contact"
-                className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors"
+                className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors"
               >
                 Vraag een offerte aan
               </Link>

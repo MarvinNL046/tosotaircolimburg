@@ -1,7 +1,4 @@
 import { Thermometer, Timer, Wrench, Shield, Wind, ArrowRight } from "lucide-react";
-import { productImages } from "@/config/images";
-import { ProductCard } from "@/components/product-card";
-import { FeaturedProductCard } from "@/components/featured-product-card";
 import { CapacityCalculator } from "@/components/capacity-calculator";
 import { ProductComparison } from "@/components/product-comparison";
 import { EnergySavingsCalculator } from "@/components/energy-savings-calculator";
@@ -29,36 +26,17 @@ const features = [
   },
 ];
 
-// Haal de Clivia uit de productImages voor featured product
-const featuredProduct = productImages[0]; // Tosot Clivia
-const otherProducts = productImages.slice(1); // Alle andere producten
-
 export function Features() {
   return (
-    <section id="features" className="bg-gradient-to-br from-primary-light/5 to-primary/5 py-12 sm:py-24">
+    <section id="features" className="bg-gradient-to-br from-blue-50 to-gray-50 py-12 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Ontdek onze Collectie
+            Bereken uw ideale Tosot airco
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600">
-            Premium klimaatbeheersing door Tosot by Gree
+            Ontdek welk Tosot model perfect past bij uw situatie
           </p>
-        </div>
-
-        {/* Featured Product */}
-        <div className="mt-16">
-          <FeaturedProductCard product={featuredProduct} />
-        </div>
-
-        {/* Other Products Grid */}
-        <div className="mt-12">
-          <h3 className="text-xl sm:text-2xl font-bold mb-8">Andere modellen</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProducts.map((product, index) => (
-              <ProductCard key={index} product={product} />
-            ))}
-          </div>
         </div>
 
         {/* Calculators */}
@@ -78,16 +56,16 @@ export function Features() {
           {features.map((feature) => (
             <div 
               key={feature.name}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1"
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                <feature.icon className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.name}</h3>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">{feature.name}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
               <a
                 href="#contact"
-                className="inline-flex items-center text-primary hover:text-primary-dark text-sm font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors"
               >
                 Meer info <ArrowRight className="ml-1 h-4 w-4" />
               </a>
@@ -96,16 +74,16 @@ export function Features() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 p-4 bg-gradient-to-br from-primary-light/5 to-primary/5 rounded-lg">
-            <Shield className="h-5 w-5 text-primary" />
+          <div className="inline-flex items-center gap-2 p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-lg">
+            <Shield className="h-5 w-5 text-blue-600" />
             <p className="text-sm text-gray-700">
-              5 jaar garantie op alle systemen
+              5 jaar garantie op alle Tosot systemen
             </p>
           </div>
           <div className="mt-8">
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Plan een gratis adviesgesprek
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -10,19 +10,19 @@ export function Footer() {
             <h3 className="text-lg sm:text-xl font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center justify-center sm:justify-start">
-                <Phone className="w-5 h-5 mr-2 text-primary" />
-                <a href={`tel:+31${contactConfig.phoneClean}`} className="hover:text-primary active:text-primary-dark transition-colors">
+                <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                <a href={`tel:+31${contactConfig.phoneClean}`} className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   {contactConfig.phone}
                 </a>
               </li>
               <li className="flex items-center justify-center sm:justify-start">
-                <Mail className="w-5 h-5 mr-2 text-primary" />
-                <a href={`mailto:${contactConfig.email}`} className="hover:text-primary active:text-primary-dark transition-colors">
+                <Mail className="w-5 h-5 mr-2 text-blue-600" />
+                <a href={`mailto:${contactConfig.email}`} className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   {contactConfig.email}
                 </a>
               </li>
               <li className="flex items-center justify-center sm:justify-start">
-                <MapPin className="w-5 h-5 mr-2 text-primary" />
+                <MapPin className="w-5 h-5 mr-2 text-blue-600" />
                 <span>Limburg, Nederland</span>
               </li>
             </ul>
@@ -32,22 +32,22 @@ export function Footer() {
             <h3 className="text-lg sm:text-xl font-semibold mb-4">Diensten</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="#features" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Tosot Airco Installatie
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="#features" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Onderhoud & Service
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="#features" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Reparatie
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="#contact" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Gratis Adviesgesprek
                 </a>
               </li>
@@ -58,27 +58,27 @@ export function Footer() {
             <h3 className="text-lg sm:text-xl font-semibold mb-4">Werkgebied</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/werkgebied/maastricht" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="/werkgebied/maastricht" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Maastricht
                 </a>
               </li>
               <li>
-                <a href="/werkgebied/heerlen" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="/werkgebied/heerlen" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Heerlen
                 </a>
               </li>
               <li>
-                <a href="/werkgebied/roermond" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="/werkgebied/roermond" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Roermond
                 </a>
               </li>
               <li>
-                <a href="/werkgebied/venlo" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="/werkgebied/venlo" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Venlo
                 </a>
               </li>
               <li>
-                <a href="/werkgebied" className="hover:text-primary active:text-primary-dark transition-colors">
+                <a href="/werkgebied" className="hover:text-blue-600 active:text-blue-700 transition-colors">
                   Heel Limburg
                 </a>
               </li>

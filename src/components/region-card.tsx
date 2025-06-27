@@ -30,7 +30,7 @@ export function RegionCard({ region }: RegionCardProps) {
               className="bg-gray-50 rounded-lg p-4"
             >
               <div className="flex items-center gap-2 mb-2">
-                <MapPin className="h-4 w-4 text-primary" />
+                <MapPin className="h-4 w-4 text-blue-600" />
                 <h3 className="font-semibold">{city.name}</h3>
               </div>
               <p className="text-sm text-gray-600">{city.description}</p>
@@ -41,7 +41,7 @@ export function RegionCard({ region }: RegionCardProps) {
         <div className="mt-6">
           <Link
             to="/#contact"
-            className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
           >
             Vraag een offerte aan in {region.name}
             <MapPin className="ml-2 h-4 w-4" />

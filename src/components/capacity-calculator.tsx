@@ -33,13 +33,13 @@ export function CapacityCalculator() {
     // Bepaal aanbeveling (hogere capaciteit voor adequate verwarming)
     let recommendation = "";
     if (area <= 25) {
-      recommendation = "Daikin Stylish 2.5kW";
+      recommendation = "Tosot Clivia 2.5kW";
     } else if (area <= 35) {
-      recommendation = "Daikin Stylish 3.5kW";
+      recommendation = "Tosot Clivia 3.5kW";
     } else if (area <= 50) {
-      recommendation = "Daikin Stylish 5.0kW";
+      recommendation = "Tosot Cosmo 5.0kW";
     } else {
-      recommendation = "Daikin Stylish Multi-split systeem";
+      recommendation = "Tosot Pular Multi-split systeem";
     }
 
     setResult({
@@ -52,7 +52,7 @@ export function CapacityCalculator() {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
       <div className="flex items-center gap-3 mb-6">
-        <Calculator className="h-6 w-6 text-primary" />
+        <Calculator className="h-6 w-6 text-blue-600" />
         <h3 className="text-xl font-semibold">Capaciteit Calculator</h3>
       </div>
       
@@ -66,7 +66,7 @@ export function CapacityCalculator() {
             min="0"
             value={area || ""}
             onChange={(e) => setArea(Number(e.target.value))}
-            className="w-full rounded-lg border-gray-300 border px-4 py-2 focus:border-primary focus:ring-primary"
+            className="w-full rounded-lg border-gray-300 border px-4 py-2 focus:border-blue-600 focus:ring-blue-600"
             placeholder="Bijv. 25"
           />
         </div>
@@ -78,7 +78,7 @@ export function CapacityCalculator() {
           <select
             value={roomType}
             onChange={(e) => setRoomType(e.target.value)}
-            className="w-full rounded-lg border-gray-300 border px-4 py-2 focus:border-primary focus:ring-primary"
+            className="w-full rounded-lg border-gray-300 border px-4 py-2 focus:border-blue-600 focus:ring-blue-600"
           >
             <option value="living">Woonkamer</option>
             <option value="bedroom">Slaapkamer</option>
@@ -90,7 +90,7 @@ export function CapacityCalculator() {
         <button
           onClick={calculateCapacity}
           disabled={!area}
-          className="w-full bg-primary text-white rounded-lg px-4 py-2 font-medium hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-orange-500 text-white rounded-lg px-4 py-2 font-medium hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Bereken capaciteit
         </button>
@@ -102,14 +102,14 @@ export function CapacityCalculator() {
               {result.minCapacity} - {result.maxCapacity} kW
             </p>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="font-medium text-primary mb-2">Onze aanbeveling:</p>
+              <p className="font-medium text-blue-600 mb-2">Onze aanbeveling:</p>
               <p className="text-gray-700 mb-4">{result.recommendation}</p>
               <p className="text-sm text-gray-500 mb-4">
                 * Deze berekening houdt rekening met zowel koeling als verwarming. Voor optimale verwarming adviseren we een iets hogere capaciteit.
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center text-primary hover:text-primary-dark font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
               >
                 Vraag een offerte aan
                 <ArrowRight className="ml-2 h-4 w-4" />

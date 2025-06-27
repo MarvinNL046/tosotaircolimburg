@@ -1,10 +1,22 @@
 import emailjs from '@emailjs/browser';
 
+// Get EmailJS configuration from environment variables
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+
 // Initialize EmailJS with your public key
-emailjs.init("sjJ8kK6U9wFjY0zX9");
+if (publicKey) {
+  emailjs.init(publicKey);
+}
 
 export const emailConfig = {
-  serviceId: "service_1rruujp",
-  templateId: "template_rkcpzhg",
-  publicKey: "sjJ8kK6U9wFjY0zX9"
+  serviceId,
+  templateId,
+  publicKey
 } as const;
+
+// Validate configuration
+if (!serviceId || !templateId || !publicKey) {
+  console.warn('EmailJS configuration is incomplete. Please check your environment variables.');
+}

@@ -29,7 +29,7 @@ const strategicPoints = [
 
 export function Strategic() {
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 to-primary-light/5">
+    <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100/50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-6">
@@ -47,8 +47,8 @@ export function Strategic() {
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <point.icon className="h-6 w-6 text-primary" />
+              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                <point.icon className="h-6 w-6 text-blue-600" />
               </div>
               
               <h3 className="text-xl font-semibold mb-3">
@@ -60,7 +60,7 @@ export function Strategic() {
               </p>
               
               <div className="pt-4 border-t border-gray-100">
-                <p className="text-primary font-semibold">
+                <p className="text-blue-600 font-semibold">
                   {point.stats}
                 </p>
               </div>
@@ -71,7 +71,7 @@ export function Strategic() {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
           >
             Ontdek onze modellen
             <svg 
