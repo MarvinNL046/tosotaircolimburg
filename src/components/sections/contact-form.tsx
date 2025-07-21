@@ -3,23 +3,23 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
-import { contactConfig } from "@/config/contact";
-import { emailConfig } from "@/config/email";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "@/utils/email";
+import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, "Naam moet minimaal 2 karakters bevatten"),
   email: z.string().email("Vul een geldig e-mailadres in"),
   phone: z.string().min(10, "Vul een geldig telefoonnummer in"),
   message: z.string().min(10, "Bericht moet minimaal 10 karakters bevatten"),
+  city: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -32,35 +32,34 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    setSubmitError(null);
 
     try {
-      await emailjs.send(
-        emailConfig.serviceId,
-        emailConfig.templateId,
-        {
-          from_name: data.name,
-          from_email: data.email,
-          phone_number: data.phone,
-          message: data.message,
-          to_name: contactConfig.companyName,
-          reply_to: data.email,
-        },
-        emailConfig.publicKey
-      );
+      await sendEmail({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        city: data.city || "Niet opgegeven",
+        message: data.message,
+      });
       
-      setSubmitSuccess(true);
+      toast.success('Bericht succesvol verzonden!');
       reset();
+      
+      setTimeout(() => {
+        navigate('/tot-snel');
+      }, 1000);
     } catch (error) {
-      console.error("Error sending email:", error);
-      setSubmitError("Er is iets misgegaan bij het versturen van uw bericht. Probeer het later opnieuw of neem telefonisch contact op.");
+      console.error("Error sending form:", error);
+      toast.error('Er is iets misgegaan bij het versturen van uw bericht.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="contact" className="bg-white py-24">
+    <>
+      <Toaster position="top-center" />
+      <section id="contact" className="bg-white py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -128,6 +127,24 @@ export function ContactForm() {
 
             <div>
               <label
+                htmlFor="city"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Stad (optioneel)
+              </label>
+              <input
+                type="text"
+                id="city"
+                {...register("city")}
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+              />
+              {errors.city && (
+                <p className="mt-1 text-sm text-red-600">{errors.city.message}</p>
+              )}
+            </div>
+
+            <div>
+              <label
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700"
               >
@@ -163,23 +180,10 @@ export function ContactForm() {
               </button>
             </div>
 
-            {submitSuccess && (
-              <div className="rounded-md bg-green-50 p-4">
-                <p className="text-sm text-green-800">
-                  Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met
-                  u op.
-                </p>
-              </div>
-            )}
-
-            {submitError && (
-              <div className="rounded-md bg-red-50 p-4">
-                <p className="text-sm text-red-600">{submitError}</p>
-              </div>
-            )}
           </form>
         </div>
       </div>
     </section>
+    </>
   );
 }
